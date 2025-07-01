@@ -13,7 +13,7 @@ public class Product {
 	private Long id;
 
 	private String name;
-	private String descrition;
+	private String description;
 	private Integer price;
 	private String image;
 
@@ -22,11 +22,11 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(Long id, String name, String descrition, Integer price, String image) {
+	public Product(Long id, String name, String description, Integer price, String image) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.descrition = descrition;
+		this.description = description;
 		this.price = price;
 		this.image = image;
 	}
@@ -47,12 +47,12 @@ public class Product {
 		this.name = name;
 	}
 
-	public String getDescrition() {
-		return descrition;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescrition(String descrition) {
-		this.descrition = descrition;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Integer getPrice() {
@@ -73,7 +73,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", descrition=" + descrition + ", price=" + price + ", image="
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + ", image="
 				+ image + "]";
 	}
 

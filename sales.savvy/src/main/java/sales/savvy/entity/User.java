@@ -15,12 +15,16 @@ public class User {
 	private String gender;
 	private String role;
 
+	@OneToOne
+	private Cart cart;
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long id, String username, String email, String password, String dob, String gender, String role) {
+	public User(Long id, String username, String email, String password, String dob, String gender, String role,
+			Cart cart) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -29,6 +33,7 @@ public class User {
 		this.dob = dob;
 		this.gender = gender;
 		this.role = role;
+		this.cart = cart;
 	}
 
 	public Long getId() {
@@ -85,6 +90,14 @@ public class User {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
 	}
 
 	@Override

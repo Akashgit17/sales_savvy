@@ -9,8 +9,8 @@ import sales.savvy.entity.Product;
 import sales.savvy.repository.ProductRepository;
 
 @Service
-public class ProductServiceImplementation implements ProductService {
-
+public class ProductServiceImplementation 
+			implements ProductService {
 	@Autowired
 	ProductRepository repo;
 
@@ -18,7 +18,7 @@ public class ProductServiceImplementation implements ProductService {
 	public void addProduct(Product prod) {
 		repo.save(prod);
 	}
-	
+
 	@Override
 	public Product searchProduct(Long id) {
 		return repo.findById(id).get();
@@ -37,7 +37,6 @@ public class ProductServiceImplementation implements ProductService {
 	@Override
 	public void deleteProduct(Long id) {
 		repo.deleteById(id);
-
 	}
 
 }
